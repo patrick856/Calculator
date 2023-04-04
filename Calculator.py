@@ -74,8 +74,8 @@ def solve(equation):
                     operators.push(i)
                 else:
                     while operators.is_empty() == 0:
-                        if values.get(operators.top.value) >= values.get(i) and operators.peek() != '(':
-                            stack1.push(operators.top.value)
+                        if values.get(operators.peek()) >= values.get(i) and operators.peek() != '(':
+                            stack1.push(operators.peek())
                             operators.pop()
                         else:
                             break
@@ -84,7 +84,7 @@ def solve(equation):
             stack1.push(int(current_number))
             current_number = ""
     while operators.is_empty() == 0:
-        stack1.push(operators.top.value)
+        stack1.push(operators.peek())
         operators.pop()
     stack1 = stack1.reverse()
     calculate = Stack()
