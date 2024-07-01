@@ -103,7 +103,7 @@ def solve(equation):
             if operator == '+':
                 calculate.push(int1+int2)
             elif operator == '-':
-                calculate.push(int1-int2)
+                calculate.push(int2-int1)
             elif operator == '*':
                 calculate.push(int1*int2)
             else:
